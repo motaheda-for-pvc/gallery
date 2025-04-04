@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المتحدة للكروت البلاستيك</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .offers {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .offer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .offer:last-child {
+            border-bottom: none;
+        }
+        .whatsapp-btn {
+            background: green;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>المتحدة للكروت البلاستيك</h1>
+        <h2>معرض الأعمال</h2>
+        <div class="gallery" id="gallery"></div>
+        
+        <h2>عروض الأسعار</h2>
+        <div class="offers">
+            <div class="offer"><span>50 كارت</span> <span>200 جنيه</span> <a href="https://wa.me/01061360592" class="whatsapp-btn">اطلب من هنا</a></div>
+            <div class="offer"><span>100 كارت</span> <span>400 جنيه</span> <a href="https://wa.me/01061360592" class="whatsapp-btn">اطلب من هنا</a></div>
+            <div class="offer"><span>250 كارت</span> <span>900 جنيه</span> <a href="https://wa.me/01061360592" class="whatsapp-btn">اطلب من هنا</a></div>
+            <div class="offer"><span>500 كارت</span> <span>1750 جنيه</span> <a href="https://wa.me/01061360592" class="whatsapp-btn">اطلب من هنا</a></div>
+            <div class="offer"><span>750 كارت</span> <span>2475 جنيه</span> <a href="https://wa.me/01061360592" class="whatsapp-btn">اطلب من هنا</a></div>
+            <div class="offer"><span>1000 كارت</span> <span>3000 جنيه</span> <a href="https://wa.me/01061360592" class="whatsapp-btn">اطلب من هنا</a></div>
+        </div>
+    </div>
+
+    <script>
+        const images = [
+            "image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg", "image5.jpg", "image6.jpg"
+        ];
+        const gallery = document.getElementById("gallery");
+        images.forEach(img => {
+            let imgElement = document.createElement("img");
+            imgElement.src = `images/${img}`;
+            gallery.appendChild(imgElement);
+        });
+    </script>
+</body>
+</html>
